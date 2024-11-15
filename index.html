@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Produtos</h1>
+
+        <!-- Formulário para Criar Produto -->
+        <section>
+            <h2>Cadastrar Produto</h2>
+            <form id="create-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required><br>
+                
+                <label for="description">Descrição:</label>
+                <input type="text" id="description" required><br>
+                
+                <label for="price">Preço:</label>
+                <input type="number" id="price" required><br>
+                
+                <button type="submit">Cadastrar Produto</button>
+            </form>
+        </section>
+
+        <!-- Formulário para Consultar Produto por ID -->
+        <section>
+            <h2>Consultar Produto por ID</h2>
+            <input type="number" id="product-id" placeholder="ID do Produto">
+            <button onclick="getProductById()">Consultar</button>
+            <p id="product-result"></p>
+        </section>
+
+        <!-- Listar Produtos -->
+        <section>
+            <h2>Todos os Produtos</h2>
+            <button onclick="getAllProducts()">Mostrar Produtos</button>
+            <div id="products-list"></div>
+        </section>
+
+        <!-- Formulário para Alterar Produto -->
+        <section>
+            <h2>Alterar Produto</h2>
+            <input type="number" id="update-id" placeholder="ID do Produto">
+            <input type="text" id="update-name" placeholder="Novo Nome">
+            <input type="text" id="update-description" placeholder="Nova Descrição">
+            <input type="number" id="update-price" placeholder="Novo Preço">
+            <button onclick="updateProduct()">Alterar Produto</button>
+        </section>
+
+        <!-- Deletar Produto -->
+        <section>
+            <h2>Deletar Produto</h2>
+            <input type="number" id="delete-id" placeholder="ID do Produto">
+            <button onclick="deleteProduct()">Deletar Produto</button>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
